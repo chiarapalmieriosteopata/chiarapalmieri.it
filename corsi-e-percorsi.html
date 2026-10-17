@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corsi e percorsi | Chiara Palmieri Osteopata</title>
+<meta name="description" content="Corsi e percorsi per genitori, nonni e donne: allattamento, primo soccorso pediatrico, pavimento pelvico e altri incontri con Chiara Palmieri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#FDFCFA;
+    --sage:#8FA687;
+    --sage-light:#E7F0E1;
+    --sage-deep:#5B7357;
+    --forest:#2E3B2C;
+    --sand:#D9CFBD;
+    --ink:#2A2E27;
+    --line: rgba(46,59,44,0.14);
+    --shadow: 0 20px 50px rgba(46,59,44,0.08);
+    --serif: 'Fraunces', serif;
+    --sans: 'Manrope', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 32px;}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:500;color:var(--forest);letter-spacing:-0.01em;}
+  .eyebrow{
+    font-family:var(--sans);font-size:12px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--sage-deep);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--sage-deep);display:inline-block;}
+  :focus-visible{outline:2px solid var(--sage-deep);outline-offset:3px;}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(253,252,250,0.85);backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;transition:border-color .3s ease, box-shadow .3s ease;
+  }
+  header.scrolled{border-color:var(--line);box-shadow:0 4px 24px rgba(46,59,44,0.05);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1160px;margin:0 auto;}
+  .logo{font-family:var(--serif);font-size:20px;color:var(--forest);font-style:italic;font-weight:500;}
+  .nav-links{display:flex;gap:36px;list-style:none;font-size:14px;font-weight:500;}
+  .nav-links a{position:relative;padding:4px 0;color:var(--ink);}
+  .nav-links a::after{content:"";position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--sage-deep);transition:width .25s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{
+    background:var(--forest);color:var(--white);padding:11px 22px;border-radius:100px;
+    font-size:13px;font-weight:600;letter-spacing:0.02em;transition:background .25s ease, transform .25s ease;
+  }
+  .nav-cta:hover{background:var(--sage-deep);transform:translateY(-1px);}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+  .nav-toggle span{display:block;width:22px;height:2px;background:var(--forest);margin:5px 0;transition:.3s;}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:100px;
+    font-size:14px;font-weight:600;transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+  }
+  .btn-primary{background:var(--forest);color:var(--white);}
+  .btn-primary:hover{background:var(--sage-deep);transform:translateY(-2px);box-shadow:0 12px 24px rgba(46,59,44,0.2);}
+  .btn-ghost{border:1px solid var(--line);color:var(--forest);}
+  .btn-ghost:hover{border-color:var(--sage-deep);background:rgba(143,166,135,0.08);}
+
+  .page-hero{padding:168px 0 70px;background:var(--sage-light);position:relative;overflow:hidden;}
+  .breadcrumb{display:flex;gap:8px;align-items:center;font-size:13px;color:#7a8175;margin-bottom:22px;}
+  .breadcrumb a{color:var(--sage-deep);font-weight:600;}
+  .page-hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.1;max-width:720px;}
+  .page-hero .lede{font-size:17px;color:#5a6156;max-width:600px;margin-top:20px;}
+
+  section{padding:72px 0;}
+  .section-head{max-width:640px;margin-bottom:40px;}
+  .section-head h2{font-size:clamp(26px,3vw,34px);line-height:1.15;}
+  .section-head p{color:#5a6156;font-size:15.5px;margin-top:12px;}
+
+  /* ======== CORSO CARD — blocco ripetibile ======== */
+  .course-list{display:flex;flex-direction:column;gap:28px;}
+  .course-card{
+    display:grid;grid-template-columns:1fr 300px;gap:0;
+    background:var(--white);border:1px solid var(--line);border-radius:24px;overflow:hidden;
+  }
+  .course-main{padding:36px;}
+  .course-tag{
+    display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--sage-deep);background:var(--sage-light);padding:5px 12px;border-radius:100px;margin-bottom:14px;
+  }
+  .course-tag.full{background:var(--sand);color:var(--forest);}
+  .course-main h3{font-size:23px;margin-bottom:10px;}
+  .course-main p{color:#5a6156;font-size:15px;margin-bottom:16px;}
+  .course-main ul{margin:0 0 16px 18px;color:#5a6156;font-size:14.5px;}
+  .course-main li{margin-bottom:6px;}
+  .course-people{font-size:13.5px;color:var(--sage-deep);font-weight:600;margin-bottom:4px;}
+  .course-side{
+    background:var(--sage-light);padding:32px;display:flex;flex-direction:column;gap:14px;justify-content:center;
+    border-left:1px solid var(--line);
+  }
+  .course-detail{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--forest);}
+  .course-detail svg{flex-shrink:0;margin-top:2px;color:var(--sage-deep);}
+  .course-detail b{display:block;font-size:13px;}
+  .course-detail span{color:#5a6156;}
+  .course-price{font-family:var(--serif);font-size:26px;color:var(--forest);margin-top:4px;}
+  .course-price small{font-family:var(--sans);font-size:12.5px;font-weight:500;color:#7a8175;display:block;margin-top:2px;}
+
+  /* stato "al momento nessun corso" — mostra/nascondi a mano se serve */
+  .empty-state{
+    text-align:center;padding:60px 20px;background:var(--sage-light);border-radius:24px;color:#5a6156;
+  }
+  .empty-state h3{color:var(--forest);margin-bottom:10px;}
+
+  .cta-band{
+    margin-top:56px;background:var(--forest);border-radius:26px;padding:44px;
+    display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;color:var(--white);
+  }
+  .cta-band h3{color:var(--white);font-size:22px;max-width:420px;}
+  .cta-band p{color:rgba(253,252,250,0.75);font-size:14px;margin-top:6px;max-width:420px;}
+  .cta-band .btn-primary{background:var(--white);color:var(--forest);}
+  .cta-band .btn-primary:hover{background:var(--sand);}
+
+  footer{background:var(--forest);color:rgba(253,252,250,0.7);padding:60px 0 30px;}
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(253,252,250,0.14);}
+  .footer-logo{font-family:var(--serif);font-style:italic;color:var(--white);font-size:22px;margin-bottom:12px;}
+  .footer-col h4{color:var(--white);font-family:var(--sans);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px;}
+  .footer-col a{display:block;font-size:14px;margin-bottom:10px;color:rgba(253,252,250,0.7);}
+  .footer-col a:hover{color:var(--white);}
+  .footer-bottom{padding-top:26px;display:flex;justify-content:space-between;font-size:12.5px;flex-wrap:wrap;gap:10px;}
+
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .nav-toggle{display:block;}
+    .course-card{grid-template-columns:1fr;}
+    .course-side{border-left:none;border-top:1px solid var(--line);}
+    section{padding:56px 0;}
+    .page-hero{padding-top:130px;}
+  }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav>
+    <a href="index.html" class="logo">Chiara Palmieri</a>
+    <ul class="nav-links">
+      <li><a href="chi-sono.html">Chi sono</a></li>
+      <li><a href="dove-ricevo.html">Dove ricevo</a></li>
+      <li><a href="trattamento-osteopatico.html">Osteopatia</a></li>
+      <li><a href="corsi-e-percorsi.html">Corsi e percorsi</a></li>
+    </ul>
+    <a href="https://calendly.com/chiarapalmieriosteopata" target="_blank" rel="noopener" class="nav-cta">Prenota una seduta</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Apri menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Corsi e percorsi</span></div>
+      <div class="eyebrow">Formazione e incontri</div>
+      <h1>Corsi e percorsi per genitori, nonni e donne.</h1>
+      <p class="lede">Incontri pratici in presenza, a numero limitato, su allattamento, primo soccorso pediatrico, pavimento pelvico e benessere della donna. Qui trovi i prossimi appuntamenti in programma.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">In programma</div>
+        <h2>Prossimi corsi</h2>
+      </div>
+
+      <div class="course-list">
+
+        <!-- ============================================================
+             BLOCCO CORSO — copia tutto il div.course-card per aggiungerne uno nuovo,
+             incollalo qui sopra o sotto, e modifica solo i testi indicati.
+             Lascia invariate le classi (course-tag, course-main, course-side, ecc).
+             ============================================================ -->
+
+        <!-- CORSO 1 -->
+        <div class="course-card">
+          <div class="course-main">
+            <span class="course-tag">Percorso per donne</span>
+            <h3>Percorso Pavimento Pelvico 🌸 Pre e post Gravidanza</h3>
+            <p>Un percorso multidisciplinare a numero chiuso, pensato per accompagnare il corpo della donna prima e dopo la gravidanza.</p>
+            <div class="course-people">Con Francesca Romano (ostetrica), Ilaria De Marchi (fisioterapista del pavimento pelvico) e Chiara Palmieri (osteopata)</div>
+            <ul>
+              <li>2 incontri teorico-pratici da 2 ore</li>
+              <li>Check-up multidisciplinare individuale da 30 minuti</li>
+            </ul>
+          </div>
+          <div class="course-side">
+            <div class="course-detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              <div><b>Dove</b><span>Novara, Via Scavini 1/E</span></div>
+            </div>
+            <div class="course-detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4"/><circle cx="12" cy="7" r="4"/></svg>
+              <div><b>Posti</b><span>Numero chiuso, 5 partecipanti</span></div>
+            </div>
+            <a href="https://wa.me/393493204167?text=Ciao%20Chiara%2C%20vorrei%20informazioni%20sul%20Percorso%20Pavimento%20Pelvico" target="_blank" rel="noopener" class="btn btn-primary" style="justify-content:center;margin-top:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Info su WhatsApp</a>
+          </div>
+        </div>
+        <!-- /CORSO 1 -->
+
+        <!-- CORSO 2 -->
+        <div class="course-card">
+          <div class="course-main">
+            <span class="course-tag">Corso per genitori</span>
+            <h3>Svezzamento Sicuro</h3>
+            <p>Il corso ha come obiettivo insegnare al genitore a fare in modo che il soffocamento non si verifichi, attraverso la corretta prevenzione e, nel caso, a riconoscerlo e trattarlo precocemente con le manovre di disostruzione.</p>
+            <p style="margin-bottom:8px;"><b style="color:var(--forest);">Gli argomenti che tratteremo:</b></p>
+            <ul>
+              <li>Come chiedere aiuto</li>
+              <li>Cos'è il soffocamento e come riconoscerlo</li>
+              <li>Prevenzione: cibo e oggetti</li>
+              <li>Tagli sicuri e Linee di Indirizzo sulla prevenzione del soffocamento</li>
+              <li>Manovre di disostruzione</li>
+            </ul>
+          </div>
+          <div class="course-side">
+            <div class="course-detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4"/><circle cx="12" cy="7" r="4"/></svg>
+              <div><b>Per chi</b><span>Genitori</span></div>
+            </div>
+            <a href="https://wa.me/393493204167?text=Ciao%20Chiara%2C%20vorrei%20informazioni%20sul%20corso%20Svezzamento%20Sicuro" target="_blank" rel="noopener" class="btn btn-primary" style="justify-content:center;margin-top:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Info su WhatsApp</a>
+          </div>
+        </div>
+        <!-- /CORSO 2 -->
+
+        <!-- CORSO 3 -->
+        <div class="course-card">
+          <div class="course-main">
+            <span class="course-tag">Incontri in presenza</span>
+            <h3>Incontri sullo sviluppo motorio</h3>
+            <p>Incontri dedicati allo sviluppo motorio del bambino, in presenza a Novara.</p>
+          </div>
+          <div class="course-side">
+            <div class="course-detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              <div><b>Dove</b><span>Novara, in presenza</span></div>
+            </div>
+            <a href="https://wa.me/393493204167?text=Ciao%20Chiara%2C%20vorrei%20informazioni%20sugli%20incontri%20sullo%20sviluppo%20motorio" target="_blank" rel="noopener" class="btn btn-primary" style="justify-content:center;margin-top:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Info su WhatsApp</a>
+          </div>
+        </div>
+        <!-- /CORSO 3 -->
+
+        <!-- Per aggiungere un nuovo corso, duplica da qui "CORSO 1" fino a "/CORSO 1"
+             e incolla sotto, modificando titolo, descrizione, date, luogo, posti, prezzo e link. -->
+
+      </div>
+
+      <!-- In alternativa, se in un momento non ci sono corsi in programma,
+           nascondi il blocco .course-list sopra e mostra questo: -->
+      <!--
+      <div class="empty-state">
+        <h3>Nessun corso in programma al momento</h3>
+        <p>Scrivimi per essere avvisata sulle prossime date.</p>
+      </div>
+      -->
+
+      <div class="cta-band">
+        <div>
+          <h3>Vuoi essere avvisata sui prossimi corsi?</h3>
+          <p>Scrivimi via email o contattami: ti aggiorno appena escono nuove date.</p>
+        </div>
+        <a href="mailto:chiarapalmieriosteopata@gmail.com" class="btn btn-primary">Scrivimi</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Chiara Palmieri</div>
+        <p style="max-width:260px;font-size:14px;">Osteopatia neonatale, pediatrica, in gravidanza e per la donna.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Studi</h4>
+        <a href="dove-ricevo.html#sozzago">Polo Natura, Sozzago (NO)</a>
+        <a href="dove-ricevo.html#novara">Hub cittadino, Novara</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <a href="mailto:chiarapalmieriosteopata@gmail.com">chiarapalmieriosteopata@gmail.com</a>
+        <a href="tel:+393493204167">+39 349 320 4167</a>
+      </div>
+      <div class="footer-col">
+        <h4>Seguimi</h4>
+        <a href="https://www.instagram.com/chiarapalmieri_osteopata/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/chiarapalmieriosteopatapediatrico/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/in/chiara-palmieri-737b96a/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Chiara Palmieri — Via Fontanile Vecchio 3, 28060 Sozzago (NO) — P.IVA IT02708400037</span>
+      <span>Termini di servizio · Privacy</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 12), {passive:true});
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.style.display === 'flex';
+    navLinks.style.display = open ? 'none' : 'flex';
+    navLinks.style.cssText += open ? '' : 'position:fixed;top:70px;left:0;right:0;background:#FDFCFA;flex-direction:column;padding:24px 32px;box-shadow:0 12px 24px rgba(0,0,0,0.08);z-index:99;';
+  });
+</script>
+</body>
+</html>
