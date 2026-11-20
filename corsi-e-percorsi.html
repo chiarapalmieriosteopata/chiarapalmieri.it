@@ -7,18 +7,18 @@
 <meta name="description" content="Corsi e percorsi per genitori, nonni e donne: allattamento, primo soccorso pediatrico, pavimento pelvico e altri incontri con Chiara Palmieri.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --white:#FDFCFA;
-    --sage:#8FA687;
-    --sage-light:#E7F0E1;
-    --sage-deep:#5B7357;
-    --forest:#2E3B2C;
-    --sand:#D9CFBD;
-    --ink:#2A2E27;
-    --line: rgba(46,59,44,0.14);
-    --shadow: 0 20px 50px rgba(46,59,44,0.08);
+    --white:#FFFFFF;
+    --sage:#7A9178;
+    --sage-light:#F1F4EE;
+    --sage-deep:#5E7360;
+    --forest:#3E4A40;
+    --sand:#C9D4C3;
+    --ink:#3E4A40;
+    --line: rgba(62,74,64,0.14);
+    --shadow: 0 20px 50px rgba(62,74,64,0.08);
     --serif: 'Fraunces', serif;
     --sans: 'Manrope', sans-serif;
   }
@@ -45,10 +45,10 @@
 
   header{
     position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(253,252,250,0.85);backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);
     border-bottom:1px solid transparent;transition:border-color .3s ease, box-shadow .3s ease;
   }
-  header.scrolled{border-color:var(--line);box-shadow:0 4px 24px rgba(46,59,44,0.05);}
+  header.scrolled{border-color:var(--line);box-shadow:0 4px 24px rgba(62,74,64,0.05);}
   nav{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1160px;margin:0 auto;}
   .logo{font-family:var(--serif);font-size:20px;color:var(--forest);font-style:italic;font-weight:500;}
   .nav-links{display:flex;gap:36px;list-style:none;font-size:14px;font-weight:500;}
@@ -68,20 +68,20 @@
     font-size:14px;font-weight:600;transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
   }
   .btn-primary{background:var(--forest);color:var(--white);}
-  .btn-primary:hover{background:var(--sage-deep);transform:translateY(-2px);box-shadow:0 12px 24px rgba(46,59,44,0.2);}
+  .btn-primary:hover{background:var(--sage-deep);transform:translateY(-2px);box-shadow:0 12px 24px rgba(62,74,64,0.2);}
   .btn-ghost{border:1px solid var(--line);color:var(--forest);}
-  .btn-ghost:hover{border-color:var(--sage-deep);background:rgba(143,166,135,0.08);}
+  .btn-ghost:hover{border-color:var(--sage-deep);background:rgba(122,145,120,0.08);}
 
   .page-hero{padding:168px 0 70px;background:var(--sage-light);position:relative;overflow:hidden;}
-  .breadcrumb{display:flex;gap:8px;align-items:center;font-size:13px;color:#7a8175;margin-bottom:22px;}
+  .breadcrumb{display:flex;gap:8px;align-items:center;font-size:13px;color:#6B786D;margin-bottom:22px;}
   .breadcrumb a{color:var(--sage-deep);font-weight:600;}
   .page-hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.1;max-width:720px;}
-  .page-hero .lede{font-size:17px;color:#5a6156;max-width:600px;margin-top:20px;}
+  .page-hero .lede{font-size:17px;color:#4F5C51;max-width:600px;margin-top:20px;}
 
   section{padding:72px 0;}
   .section-head{max-width:640px;margin-bottom:40px;}
   .section-head h2{font-size:clamp(26px,3vw,34px);line-height:1.15;}
-  .section-head p{color:#5a6156;font-size:15.5px;margin-top:12px;}
+  .section-head p{color:#4F5C51;font-size:15.5px;margin-top:12px;}
 
   /* ======== CORSO CARD — blocco ripetibile ======== */
   .course-list{display:flex;flex-direction:column;gap:28px;}
@@ -96,8 +96,8 @@
   }
   .course-tag.full{background:var(--sand);color:var(--forest);}
   .course-main h3{font-size:23px;margin-bottom:10px;}
-  .course-main p{color:#5a6156;font-size:15px;margin-bottom:16px;}
-  .course-main ul{margin:0 0 16px 18px;color:#5a6156;font-size:14.5px;}
+  .course-main p{color:#4F5C51;font-size:15px;margin-bottom:16px;}
+  .course-main ul{margin:0 0 16px 18px;color:#4F5C51;font-size:14.5px;}
   .course-main li{margin-bottom:6px;}
   .course-people{font-size:13.5px;color:var(--sage-deep);font-weight:600;margin-bottom:4px;}
   .course-side{
@@ -107,13 +107,13 @@
   .course-detail{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--forest);}
   .course-detail svg{flex-shrink:0;margin-top:2px;color:var(--sage-deep);}
   .course-detail b{display:block;font-size:13px;}
-  .course-detail span{color:#5a6156;}
+  .course-detail span{color:#4F5C51;}
   .course-price{font-family:var(--serif);font-size:26px;color:var(--forest);margin-top:4px;}
-  .course-price small{font-family:var(--sans);font-size:12.5px;font-weight:500;color:#7a8175;display:block;margin-top:2px;}
+  .course-price small{font-family:var(--sans);font-size:12.5px;font-weight:500;color:#6B786D;display:block;margin-top:2px;}
 
   /* stato "al momento nessun corso" — mostra/nascondi a mano se serve */
   .empty-state{
-    text-align:center;padding:60px 20px;background:var(--sage-light);border-radius:24px;color:#5a6156;
+    text-align:center;padding:60px 20px;background:var(--sage-light);border-radius:24px;color:#4F5C51;
   }
   .empty-state h3{color:var(--forest);margin-bottom:10px;}
 
@@ -122,15 +122,15 @@
     display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;color:var(--white);
   }
   .cta-band h3{color:var(--white);font-size:22px;max-width:420px;}
-  .cta-band p{color:rgba(253,252,250,0.75);font-size:14px;margin-top:6px;max-width:420px;}
+  .cta-band p{color:rgba(255,255,255,0.75);font-size:14px;margin-top:6px;max-width:420px;}
   .cta-band .btn-primary{background:var(--white);color:var(--forest);}
   .cta-band .btn-primary:hover{background:var(--sand);}
 
-  footer{background:var(--forest);color:rgba(253,252,250,0.7);padding:60px 0 30px;}
-  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(253,252,250,0.14);}
+  footer{background:var(--forest);color:rgba(255,255,255,0.7);padding:60px 0 30px;}
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.14);}
   .footer-logo{font-family:var(--serif);font-style:italic;color:var(--white);font-size:22px;margin-bottom:12px;}
   .footer-col h4{color:var(--white);font-family:var(--sans);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px;}
-  .footer-col a{display:block;font-size:14px;margin-bottom:10px;color:rgba(253,252,250,0.7);}
+  .footer-col a{display:block;font-size:14px;margin-bottom:10px;color:rgba(255,255,255,0.7);}
   .footer-col a:hover{color:var(--white);}
   .footer-bottom{padding-top:26px;display:flex;justify-content:space-between;font-size:12.5px;flex-wrap:wrap;gap:10px;}
 
@@ -142,20 +142,34 @@
     section{padding:56px 0;}
     .page-hero{padding-top:130px;}
   }
+
+  /* — Logo — */
+  .lm-bg{fill:#7A9178;} .lm-line{stroke:#fff;}
+  .logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-style:normal;}
+  .logo-mark{width:42px;height:42px;flex-shrink:0;display:block;}
+  .logo-text{display:flex;flex-direction:column;line-height:1.05;font-family:'Cormorant Garamond',var(--serif);font-size:25px;font-weight:500;font-style:normal;color:var(--forest);}
+  .logo-text small{font-family:var(--sans);font-size:8.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--sage-deep);margin-top:5px;font-weight:500;}
+  .footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:12px;font-style:normal;}
+  .footer-logo .lm-bg{fill:#fff;} .footer-logo .lm-line{stroke:#5E7360;}
+  .footer-logo .logo-mark{width:44px;height:44px;}
+  .footer-logo .logo-text{color:#fff;font-size:26px;}
+  .footer-logo .logo-text small{color:rgba(255,255,255,.7);}
+  @media (max-width:520px){.logo-mark{width:36px;height:36px;}.logo-text{font-size:22px;}.logo-text small{font-size:7.5px;}}
 </style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 630 630%27%3E%3Ccircle cx=%27315%27 cy=%27315%27 r=%27300%27 fill=%27%237A9178%27/%3E%3Cg fill=%27none%27 stroke=%27%23fff%27 stroke-width=%2718%27 stroke-linecap=%27round%27%3E%3Ccircle cx=%27272%27 cy=%27183%27 r=%2743%27/%3E%3Cpath d=%27M232 242C186 292 180 378 250 424C320 468 424 434 434 300%27/%3E%3Ccircle cx=%27330%27 cy=%27293%27 r=%2728%27/%3E%3Cellipse cx=%27350%27 cy=%27366%27 rx=%2748%27 ry=%2734%27 transform=%27rotate(18 350 366)%27/%3E%3C/g%3E%3C/svg%3E">
 </head>
 <body>
 
 <header id="site-header">
   <nav>
-    <a href="index.html" class="logo">Chiara Palmieri</a>
+    <a href="index.html" class="logo" aria-label="Chiara Palmieri"><svg class="logo-mark " viewBox="0 0 630 630" aria-hidden="true"><circle class="lm-bg" cx="315" cy="315" r="290"/><g class="lm-line" fill="none" stroke-width="15" stroke-linecap="round"><circle cx="272" cy="183" r="43"/><path d="M232 242C186 292 180 378 250 424C320 468 424 434 434 300"/><circle cx="330" cy="293" r="28"/><ellipse cx="350" cy="366" rx="48" ry="34" transform="rotate(18 350 366)"/></g></svg><span class="logo-text">Chiara Palmieri<small>Studio osteopatico</small></span></a>
     <ul class="nav-links">
       <li><a href="chi-sono.html">Chi sono</a></li>
       <li><a href="dove-ricevo.html">Dove ricevo</a></li>
       <li><a href="trattamento-osteopatico.html">Osteopatia</a></li>
       <li><a href="corsi-e-percorsi.html">Corsi e percorsi</a></li>
     </ul>
-    <a href="https://calendly.com/chiarapalmieriosteopata" target="_blank" rel="noopener" class="nav-cta">Prenota una seduta</a>
+    <a href="prenota.html" class="nav-cta">Prenota una seduta</a>
     <button class="nav-toggle" id="navToggle" aria-label="Apri menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -282,7 +296,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">Chiara Palmieri</div>
+        <div class="footer-logo"><svg class="logo-mark " viewBox="0 0 630 630" aria-hidden="true"><circle class="lm-bg" cx="315" cy="315" r="290"/><g class="lm-line" fill="none" stroke-width="15" stroke-linecap="round"><circle cx="272" cy="183" r="43"/><path d="M232 242C186 292 180 378 250 424C320 468 424 434 434 300"/><circle cx="330" cy="293" r="28"/><ellipse cx="350" cy="366" rx="48" ry="34" transform="rotate(18 350 366)"/></g></svg><span class="logo-text">Chiara Palmieri<small>Studio osteopatico</small></span></div>
         <p style="max-width:260px;font-size:14px;">Osteopatia neonatale, pediatrica, in gravidanza e per la donna.</p>
       </div>
       <div class="footer-col">
@@ -317,7 +331,7 @@
   navToggle.addEventListener('click', () => {
     const open = navLinks.style.display === 'flex';
     navLinks.style.display = open ? 'none' : 'flex';
-    navLinks.style.cssText += open ? '' : 'position:fixed;top:70px;left:0;right:0;background:#FDFCFA;flex-direction:column;padding:24px 32px;box-shadow:0 12px 24px rgba(0,0,0,0.08);z-index:99;';
+    navLinks.style.cssText += open ? '' : 'position:fixed;top:70px;left:0;right:0;background:#FFFFFF;flex-direction:column;padding:24px 32px;box-shadow:0 12px 24px rgba(0,0,0,0.08);z-index:99;';
   });
 </script>
 </body>

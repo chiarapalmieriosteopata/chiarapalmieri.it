@@ -7,17 +7,17 @@
 <meta name="description" content="Infermiera dal 2009, osteopata dal 2022: il percorso di Chiara Palmieri tra terapia intensiva neonatale e osteopatia pediatrica.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-    --white:#FDFCFA;
-    --sage:#8FA687;
-    --sage-deep:#5B7357;
-    --forest:#2E3B2C;
-    --sand:#D9CFBD;
-    --ink:#2A2E27;
-    --line: rgba(46,59,44,0.14);
-    --shadow: 0 20px 50px rgba(46,59,44,0.08);
+    --white:#FFFFFF;
+    --sage:#7A9178;
+    --sage-deep:#5E7360;
+    --forest:#3E4A40;
+    --sand:#C9D4C3;
+    --ink:#3E4A40;
+    --line: rgba(62,74,64,0.14);
+    --shadow: 0 20px 50px rgba(62,74,64,0.08);
     --serif: 'Fraunces', serif;
     --sans: 'Manrope', sans-serif;
   }
@@ -51,12 +51,12 @@
   /* ---------- NAV ---------- */
   header{
     position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(253,252,250,0.85);
+    background:rgba(255,255,255,0.85);
     backdrop-filter:blur(10px);
     border-bottom:1px solid transparent;
     transition:border-color .3s ease, box-shadow .3s ease;
   }
-  header.scrolled{border-color:var(--line);box-shadow:0 4px 24px rgba(46,59,44,0.05);}
+  header.scrolled{border-color:var(--line);box-shadow:0 4px 24px rgba(62,74,64,0.05);}
   nav{
     display:flex;align-items:center;justify-content:space-between;
     padding:20px 32px;max-width:1160px;margin:0 auto;
@@ -86,7 +86,7 @@
   .hero-eyebrow{font-family:var(--serif);font-style:italic;color:var(--sage-deep);font-size:18px;margin-bottom:18px;display:block;}
   .hero h1{font-size:clamp(38px,5vw,62px);line-height:1.08;margin-bottom:26px;}
   .hero h1 em{font-style:italic;color:var(--sage-deep);}
-  .hero p{font-size:17px;color:#5a6156;max-width:460px;margin-bottom:36px;}
+  .hero p{font-size:17px;color:#4F5C51;max-width:460px;margin-bottom:36px;}
   .btn-row{display:flex;gap:16px;flex-wrap:wrap;}
   .btn{
     display:inline-flex;align-items:center;gap:10px;
@@ -94,13 +94,13 @@
     transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
   }
   .btn-primary{background:var(--forest);color:var(--white);}
-  .btn-primary:hover{background:var(--sage-deep);transform:translateY(-2px);box-shadow:0 12px 24px rgba(46,59,44,0.2);}
+  .btn-primary:hover{background:var(--sage-deep);transform:translateY(-2px);box-shadow:0 12px 24px rgba(62,74,64,0.2);}
   .btn-ghost{border:1px solid var(--line);color:var(--forest);}
-  .btn-ghost:hover{border-color:var(--sage-deep);background:rgba(143,166,135,0.08);}
+  .btn-ghost:hover{border-color:var(--sage-deep);background:rgba(122,145,120,0.08);}
 
   .hero-photo{
     position:relative;aspect-ratio:4/5;border-radius:28px;
-    background:linear-gradient(160deg,#EDF1E9,#DCE5D6 55%,#C7D4C0);
+    background:linear-gradient(160deg,#F1F4EE,#DCE5D6 55%,#C9D4C3);
     display:flex;align-items:center;justify-content:center;
     box-shadow:var(--shadow);
   }
@@ -130,14 +130,14 @@
   .section-head{max-width:640px;margin-bottom:56px;}
   .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
   .section-head h2{font-size:clamp(30px,3.6vw,42px);line-height:1.15;}
-  .section-head p{color:#5a6156;font-size:16px;margin-top:14px;}
+  .section-head p{color:#4F5C51;font-size:16px;margin-top:14px;}
 
   /* ---------- CHI SONO ---------- */
   .about{background:var(--white);}
   .about .wrap{display:grid;grid-template-columns:0.85fr 1.15fr;gap:72px;align-items:center;}
   .about-photo{
     aspect-ratio:3/4;border-radius:24px;
-    background:linear-gradient(150deg,#F2EFE7,#E4DCC9);
+    background:linear-gradient(150deg,#F1F4EE,#DDE4D8);
     box-shadow:var(--shadow);
     overflow:hidden;
   }
@@ -149,13 +149,13 @@
     .hero-split{grid-template-columns:1fr;}
     .hero-portrait{max-width:220px;margin:0 auto;}
   }
-  .about-copy p{color:#4c5348;font-size:16.5px;margin-bottom:18px;}
+  .about-copy p{color:#445046;font-size:16.5px;margin-bottom:18px;}
   .stat-row{display:flex;gap:40px;margin-top:36px;padding-top:32px;border-top:1px solid var(--line);}
   .stat b{font-family:var(--serif);font-size:30px;color:var(--forest);display:block;}
-  .stat span{font-size:12.5px;color:#7a8175;text-transform:uppercase;letter-spacing:0.06em;}
+  .stat span{font-size:12.5px;color:#6B786D;text-transform:uppercase;letter-spacing:0.06em;}
 
   /* ---------- STUDI ---------- */
-  .studios{background:#F5F5F0;}
+  .studios{background:#F1F4EE;}
   .studio-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
   .studio-card{
     background:var(--white);border-radius:26px;overflow:hidden;border:1px solid var(--line);
@@ -164,7 +164,7 @@
   .studio-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
   .studio-photo{aspect-ratio:16/10;position:relative;}
   .studio-photo.nature{background:linear-gradient(155deg,#DCE7D5,#B9CBAF);}
-  .studio-photo.city{background:linear-gradient(155deg,#E7E4DA,#D2CCBA);}
+  .studio-photo.city{background:linear-gradient(155deg,#E3E9DE,#C9D4C3);}
   .studio-body{padding:34px;}
   .studio-tag{
     font-size:11.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
@@ -184,11 +184,11 @@
     padding:36px 0;border-bottom:1px solid var(--line);
     transition:background .25s ease;
   }
-  .service-row:hover{background:rgba(143,166,135,0.05);}
+  .service-row:hover{background:rgba(122,145,120,0.05);}
   .service-num{font-family:var(--serif);font-size:15px;color:var(--sand);font-weight:500;padding-top:4px;}
   .service-row h3{font-size:21px;margin-bottom:4px;}
   .service-row .service-sub{font-size:13px;color:var(--sage-deep);font-weight:600;letter-spacing:0.03em;}
-  .service-row p{color:#5a6156;font-size:15px;}
+  .service-row p{color:#4F5C51;font-size:15px;}
 
   .courses-banner{
     margin-top:56px;background:var(--forest);border-radius:26px;padding:48px;
@@ -196,15 +196,15 @@
     color:var(--white);
   }
   .courses-banner h3{color:var(--white);font-size:24px;max-width:420px;}
-  .courses-banner p{color:rgba(253,252,250,0.75);font-size:14.5px;margin-top:8px;max-width:420px;}
+  .courses-banner p{color:rgba(255,255,255,0.75);font-size:14.5px;margin-top:8px;max-width:420px;}
   .courses-banner .btn-primary{background:var(--white);color:var(--forest);}
   .courses-banner .btn-primary:hover{background:var(--sand);}
 
   /* ---------- TESTIMONIALS ---------- */
-  .testimonials{background:#F5F5F0;}
+  .testimonials{background:#F1F4EE;}
   .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .t-card{background:var(--white);border-radius:22px;padding:32px;border:1px solid var(--line);}
-  .t-card p{font-size:14.5px;color:#4c5348;margin-bottom:20px;}
+  .t-card p{font-size:14.5px;color:#445046;margin-bottom:20px;}
   .t-name{font-family:var(--serif);font-style:italic;color:var(--sage-deep);font-size:15px;}
 
   /* ---------- PRENOTA ---------- */
@@ -213,17 +213,17 @@
   .booking .eyebrow{color:var(--sand);}
   .booking .eyebrow::before{background:var(--sand);}
   .booking h2{color:var(--white);font-size:clamp(30px,3.6vw,42px);margin-bottom:18px;}
-  .booking p{color:rgba(253,252,250,0.78);font-size:16px;margin-bottom:30px;max-width:440px;}
+  .booking p{color:rgba(255,255,255,0.78);font-size:16px;margin-bottom:30px;max-width:440px;}
   .booking-card{
-    background:rgba(253,252,250,0.06);border:1px solid rgba(253,252,250,0.16);
+    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);
     border-radius:24px;padding:40px;backdrop-filter:blur(6px);
   }
   .booking-card h3{color:var(--white);font-size:19px;margin-bottom:20px;}
-  .booking-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(253,252,250,0.12);align-items:flex-start;}
+  .booking-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.12);align-items:flex-start;}
   .booking-item:last-of-type{border-bottom:none;}
   .booking-item svg{flex-shrink:0;margin-top:2px;color:var(--sand);}
   .booking-item b{display:block;color:var(--white);font-size:14.5px;margin-bottom:2px;}
-  .booking-item span{color:rgba(253,252,250,0.65);font-size:13.5px;}
+  .booking-item span{color:rgba(255,255,255,0.65);font-size:13.5px;}
   .booking-card .btn-primary{width:100%;justify-content:center;background:var(--sage);color:var(--forest);margin-top:26px;}
   .booking-card .btn-primary:hover{background:var(--sand);}
 
@@ -238,14 +238,14 @@
   summary::-webkit-details-marker{display:none;}
   summary .plus{font-size:22px;color:var(--sage-deep);transition:transform .25s ease;flex-shrink:0;}
   details[open] summary .plus{transform:rotate(45deg);}
-  details p{color:#5a6156;font-size:15px;margin-top:14px;max-width:640px;}
+  details p{color:#4F5C51;font-size:15px;margin-top:14px;max-width:640px;}
 
   /* ---------- FOOTER ---------- */
-  footer{background:var(--forest);color:rgba(253,252,250,0.7);padding:60px 0 30px;}
-  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(253,252,250,0.14);}
+  footer{background:var(--forest);color:rgba(255,255,255,0.7);padding:60px 0 30px;}
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.14);}
   .footer-logo{font-family:var(--serif);font-style:italic;color:var(--white);font-size:22px;margin-bottom:12px;}
   .footer-col h4{color:var(--white);font-family:var(--sans);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px;}
-  .footer-col a{display:block;font-size:14px;margin-bottom:10px;color:rgba(253,252,250,0.7);}
+  .footer-col a{display:block;font-size:14px;margin-bottom:10px;color:rgba(255,255,255,0.7);}
   .footer-col a:hover{color:var(--white);}
   .footer-bottom{padding-top:26px;display:flex;justify-content:space-between;font-size:12.5px;flex-wrap:wrap;gap:10px;}
 
@@ -267,27 +267,27 @@
 
 /* ================= SUBPAGES ================= */
 .page-hero{
-  padding:168px 0 80px;background:#F5F5F0;position:relative;overflow:hidden;
+  padding:168px 0 80px;background:#F1F4EE;position:relative;overflow:hidden;
 }
 .breadcrumb{
-  display:flex;gap:8px;align-items:center;font-size:13px;color:#7a8175;margin-bottom:22px;
+  display:flex;gap:8px;align-items:center;font-size:13px;color:#6B786D;margin-bottom:22px;
 }
 .breadcrumb a{color:var(--sage-deep);font-weight:600;}
 .page-hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.1;max-width:720px;}
-.page-hero .lede{font-size:17px;color:#5a6156;max-width:560px;margin-top:20px;}
+.page-hero .lede{font-size:17px;color:#4F5C51;max-width:560px;margin-top:20px;}
 .page-hero-photo{
   margin-top:44px;aspect-ratio:21/8;border-radius:24px;box-shadow:var(--shadow);
   display:flex;align-items:center;justify-content:center;
 }
-.page-hero-photo.tone-nature{background:linear-gradient(150deg,#E4EBDD,#C4D5BB);}
-.page-hero-photo.tone-city{background:linear-gradient(150deg,#EAE7DC,#D2CCBA);}
-.page-hero-photo.tone-sage{background:linear-gradient(150deg,#EDF1E9,#C7D4C0);}
+.page-hero-photo.tone-nature{background:linear-gradient(150deg,#F1F4EE,#C4D5BB);}
+.page-hero-photo.tone-city{background:linear-gradient(150deg,#E3E9DE,#C9D4C3);}
+.page-hero-photo.tone-sage{background:linear-gradient(150deg,#F1F4EE,#C9D4C3);}
 
 .prose{max-width:720px;}
-.prose p{color:#4c5348;font-size:16.5px;margin-bottom:20px;}
+.prose p{color:#445046;font-size:16.5px;margin-bottom:20px;}
 .prose h2{font-size:clamp(24px,2.8vw,32px);margin:44px 0 18px;}
 .prose h3{font-size:20px;margin:32px 0 12px;}
-.prose ul{margin:0 0 20px 20px;color:#4c5348;font-size:16px;}
+.prose ul{margin:0 0 20px 20px;color:#445046;font-size:16px;}
 .prose li{margin-bottom:8px;}
 
 /* timeline (chi sono) */
@@ -309,12 +309,12 @@
 .tl-year{grid-column:1;grid-row:1;text-align:right;font-family:var(--serif);font-size:17px;line-height:1.5;color:var(--sage-deep);font-weight:500;}
 .tl-body{grid-column:3;grid-row:1;}
 .tl-item h3{font-size:16px;line-height:1.35;margin:0 0 2px;color:var(--forest);}
-.tl-item p{color:#5a6156;font-size:13.5px;line-height:1.45;margin:0;}
+.tl-item p{color:#4F5C51;font-size:13.5px;line-height:1.45;margin:0;}
 
 /* two column info + sidebar (studio pages) */
 .studio-detail{display:grid;grid-template-columns:1.3fr 0.9fr;gap:64px;align-items:start;}
 .info-card{
-  background:#F5F5F0;border-radius:22px;padding:32px;border:1px solid var(--line);
+  background:#F1F4EE;border-radius:22px;padding:32px;border:1px solid var(--line);
   position:sticky;top:110px;
 }
 .info-card h4{font-family:var(--serif);font-size:17px;color:var(--forest);margin-bottom:18px;}
@@ -325,26 +325,26 @@
 .info-row span{font-size:13.5px;color:#6a7164;}
 
 .gallery-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:36px 0;}
-.gallery-strip .ph{aspect-ratio:4/5;border-radius:18px;background:linear-gradient(155deg,#EDF1E9,#C7D4C0);}
+.gallery-strip .ph{aspect-ratio:4/5;border-radius:18px;background:linear-gradient(155deg,#F1F4EE,#C9D4C3);}
 
 /* trattamento page - process steps */
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px;}
 .process-card{border-top:2px solid var(--sage-deep);padding-top:18px;}
 .process-num{font-family:var(--serif);font-size:26px;color:var(--sand);margin-bottom:10px;display:block;}
 .process-card h3{font-size:16.5px;margin-bottom:8px;}
-.process-card p{font-size:14px;color:#5a6156;}
+.process-card p{font-size:14px;color:#4F5C51;}
 
 .principle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:36px 0 8px;}
-.principle-card{background:#F5F5F0;border-radius:20px;padding:28px;}
+.principle-card{background:#F1F4EE;border-radius:20px;padding:28px;}
 .principle-card h3{font-size:17px;margin-bottom:8px;}
-.principle-card p{font-size:14.5px;color:#5a6156;margin:0;}
+.principle-card p{font-size:14.5px;color:#4F5C51;margin:0;}
 
 .cta-band{
   margin-top:64px;background:var(--forest);border-radius:26px;padding:48px;
   display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;color:var(--white);
 }
 .cta-band h3{color:var(--white);font-size:24px;max-width:420px;}
-.cta-band p{color:rgba(253,252,250,0.75);font-size:14.5px;margin-top:8px;max-width:420px;}
+.cta-band p{color:rgba(255,255,255,0.75);font-size:14.5px;margin-top:8px;max-width:420px;}
 .cta-band .btn-primary{background:var(--white);color:var(--forest);}
 .cta-band .btn-primary:hover{background:var(--sand);}
 
@@ -359,13 +359,27 @@
   .tl-year{font-size:15px;}
 }
 
+
+  /* — Logo — */
+  .lm-bg{fill:#7A9178;} .lm-line{stroke:#fff;}
+  .logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-style:normal;}
+  .logo-mark{width:42px;height:42px;flex-shrink:0;display:block;}
+  .logo-text{display:flex;flex-direction:column;line-height:1.05;font-family:'Cormorant Garamond',var(--serif);font-size:25px;font-weight:500;font-style:normal;color:var(--forest);}
+  .logo-text small{font-family:var(--sans);font-size:8.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--sage-deep);margin-top:5px;font-weight:500;}
+  .footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:12px;font-style:normal;}
+  .footer-logo .lm-bg{fill:#fff;} .footer-logo .lm-line{stroke:#5E7360;}
+  .footer-logo .logo-mark{width:44px;height:44px;}
+  .footer-logo .logo-text{color:#fff;font-size:26px;}
+  .footer-logo .logo-text small{color:rgba(255,255,255,.7);}
+  @media (max-width:520px){.logo-mark{width:36px;height:36px;}.logo-text{font-size:22px;}.logo-text small{font-size:7.5px;}}
 </style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 630 630%27%3E%3Ccircle cx=%27315%27 cy=%27315%27 r=%27300%27 fill=%27%237A9178%27/%3E%3Cg fill=%27none%27 stroke=%27%23fff%27 stroke-width=%2718%27 stroke-linecap=%27round%27%3E%3Ccircle cx=%27272%27 cy=%27183%27 r=%2743%27/%3E%3Cpath d=%27M232 242C186 292 180 378 250 424C320 468 424 434 434 300%27/%3E%3Ccircle cx=%27330%27 cy=%27293%27 r=%2728%27/%3E%3Cellipse cx=%27350%27 cy=%27366%27 rx=%2748%27 ry=%2734%27 transform=%27rotate(18 350 366)%27/%3E%3C/g%3E%3C/svg%3E">
 </head>
 <body>
 
 <header id="site-header">
   <nav>
-    <a href="index.html" class="logo">Chiara Palmieri</a>
+    <a href="index.html" class="logo" aria-label="Chiara Palmieri"><svg class="logo-mark " viewBox="0 0 630 630" aria-hidden="true"><circle class="lm-bg" cx="315" cy="315" r="290"/><g class="lm-line" fill="none" stroke-width="15" stroke-linecap="round"><circle cx="272" cy="183" r="43"/><path d="M232 242C186 292 180 378 250 424C320 468 424 434 434 300"/><circle cx="330" cy="293" r="28"/><ellipse cx="350" cy="366" rx="48" ry="34" transform="rotate(18 350 366)"/></g></svg><span class="logo-text">Chiara Palmieri<small>Studio osteopatico</small></span></a>
     <ul class="nav-links">
       <li><a href="chi-sono.html">Chi sono</a></li>
       <li><a href="dove-ricevo.html">Dove ricevo</a></li>
@@ -373,7 +387,7 @@
       <li><a href="index.html#cosa-faccio">Cosa faccio</a></li>
       <li><a href="corsi-e-percorsi.html">Corsi</a></li>
     </ul>
-    <a href="https://calendly.com/chiarapalmieriosteopata" target="_blank" rel="noopener" class="nav-cta">Prenota una seduta</a>
+    <a href="prenota.html" class="nav-cta">Prenota una seduta</a>
     <button class="nav-toggle" id="navToggle" aria-label="Apri menu"><span></span><span></span><span></span></button>
   </nav>
 </header>
@@ -508,7 +522,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">Chiara Palmieri</div>
+        <div class="footer-logo"><svg class="logo-mark " viewBox="0 0 630 630" aria-hidden="true"><circle class="lm-bg" cx="315" cy="315" r="290"/><g class="lm-line" fill="none" stroke-width="15" stroke-linecap="round"><circle cx="272" cy="183" r="43"/><path d="M232 242C186 292 180 378 250 424C320 468 424 434 434 300"/><circle cx="330" cy="293" r="28"/><ellipse cx="350" cy="366" rx="48" ry="34" transform="rotate(18 350 366)"/></g></svg><span class="logo-text">Chiara Palmieri<small>Studio osteopatico</small></span></div>
         <p style="max-width:260px;font-size:14px;">Osteopatia neonatale, pediatrica, in gravidanza e per la donna.</p>
       </div>
       <div class="footer-col">
@@ -543,7 +557,7 @@
   navToggle.addEventListener('click', () => {
     const open = navLinks.style.display === 'flex';
     navLinks.style.display = open ? 'none' : 'flex';
-    navLinks.style.cssText += open ? '' : 'position:fixed;top:70px;left:0;right:0;background:#FDFCFA;flex-direction:column;padding:24px 32px;box-shadow:0 12px 24px rgba(0,0,0,0.08);z-index:99;';
+    navLinks.style.cssText += open ? '' : 'position:fixed;top:70px;left:0;right:0;background:#FFFFFF;flex-direction:column;padding:24px 32px;box-shadow:0 12px 24px rgba(0,0,0,0.08);z-index:99;';
   });
 </script>
 </body>
